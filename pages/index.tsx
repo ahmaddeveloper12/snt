@@ -42,7 +42,7 @@ const Index = () => {
         </div> */}
 
         <div className="blog-post">
-          <a className='two' href="./data">
+          {/* <a className='two' href="./data">
             <Image 
               src="https://image.freepik.com/free-photo/beautiful-view-famous-tomb-architectural-landmarks_1150-16125.jpg" // Freepik Image URL
               alt="Travel 2" 
@@ -50,12 +50,13 @@ const Index = () => {
               height={612} 
               className="blog-image"
             />
-          </a>
+          </a> */}
+          <a href="./data"> Blogs</a>
           <a className='two' href="./job">
-            <h2>Exploring the Beautiful Land of Sindh</h2>
+            <h2>Exploring the Beautiful Land of world</h2>
           </a>
           <a className='two' href="./wo">
-            <p>Visit the Beautiful cities of Sindh</p>
+            <p>Upload form for Blog</p>
           </a>
         </div>
 
