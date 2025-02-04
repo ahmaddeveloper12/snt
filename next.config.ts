@@ -6,14 +6,12 @@
 // };
 
 // export default nextConfig;
-
-
+// next.config.js
 module.exports = {
   images: {
     domains: [
-      'image.freepik.com', // Add Freepik domain here
-      'media.istockphoto.com', // Example domain if you're using iStock images
-      // Add other domains that you plan to use
+      'img.freepik.com',
+      'i.dawn.com', // Add this domain
     ],
   },
 };
