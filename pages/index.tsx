@@ -141,7 +141,7 @@ const Index = () => {
       </header>
 
       <section className="blog-posts">
-        <div className="blog-post">
+        {/* <div className="blog-post">
           <a className='two' href="./items">
             <Image 
               src="https://image.freepik.com/free-photo/mosque-with-domes-and-tower_1150-13066.jpg" // Freepik Image URL
@@ -157,7 +157,7 @@ const Index = () => {
           <a className='two' href="./form">
             <p>Visit the Beautiful cities of Punjab</p>
           </a>
-        </div>
+        </div> */}
 
         <div className="blog-post">
           <a className='two' href="./data">
@@ -177,7 +177,7 @@ const Index = () => {
           </a>
         </div>
 
-        <div className="blog-post">
+        {/* <div className="blog-post">
           <a className='two' href="./red">
             <Image 
               src="https://image.freepik.com/free-photo/stunning-view-public-college-university_1150-17953.jpg" // Freepik Image URL
@@ -191,9 +191,9 @@ const Index = () => {
           <a className='two' href="./low">
             <p>Visit the Beautiful cities of KPK</p>
           </a>
-        </div>
+        </div> */}
 
-        <div className="blog-post">
+        {/* <div className="blog-post">
           <a className='two' href="./bk">
             <Image 
               src="https://image.freepik.com/free-photo/historical-tomb-beautiful-old-building_1150-15058.jpg" // Freepik Image URL
@@ -209,7 +209,7 @@ const Index = () => {
           <a className='two' href="./book">
             <p>Visit the Beautiful cities of Balochistan</p>
           </a>
-        </div>
+        </div> */}
       </section>
 
       <footer>
