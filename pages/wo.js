@@ -1,85 +1,3 @@
-// // pages/index.js
-
-// import { useState } from 'react';
-// import { useRouter } from 'next/router';
-
-// export default function Home() {
-//   const [title, setTitle] = useState('');
-//   const [description, setDescription] = useState('');
-//   const [imgUrl, setImgUrl] = useState('');
-//   const router = useRouter();
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     const data = { title, description, imgUrl };
-
-//     try {
-//       // Submit the form data to the API
-//       const response = await fetch('/api/submitData', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(data),
-//       });
-
-//       const result = await response.json();
-//       if (response.ok) {
-//         // Redirect to the data-fetching page
-//         router.push('/data');
-//       } else {
-//         console.error(result.message);
-//       }
-//     } catch (error) {
-//       console.error('Error submitting form data', error);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h1>Submit Your Data</h1>
-//       <form onSubmit={handleSubmit}>
-//         <div>
-//           <label>Title</label>
-//           <input
-//             type="text"
-//             value={title}
-//             onChange={(e) => setTitle(e.target.value)}
-//             required
-//           />
-//         </div>
-//         <div>
-//           <label>Description</label>
-//           <textarea
-//             value={description}
-//             onChange={(e) => setDescription(e.target.value)}
-//             required
-//           />
-//         </div>
-//         <div>
-//           <label>Image URL</label>
-//           <input
-//             type="url"
-//             value={imgUrl}
-//             onChange={(e) => setImgUrl(e.target.value)}
-//             required
-//           />
-//         </div>
-//         <button type="submit">Submit</button>
-//       </form>
-//     </div>
-//   );
-// }
-
-
-
-
-
-
-
-// pages/index.js
-
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -87,12 +5,13 @@ export default function Home() {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [imgUrl, setImgUrl] = useState('');
+  const [news, setNews] = useState(''); // Added state for 'news'
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const data = { title, description, imgUrl };
+    const data = { title, description, imgUrl, news }; // Include 'news' in the data object
 
     try {
       // Submit the form data to the API
@@ -140,6 +59,15 @@ export default function Home() {
           />
         </div>
         <div className="form-group">
+          <label>News</label> {/* Changed label from 'news' */}
+          <textarea
+            value={news} // Bind to 'news' state
+            onChange={(e) => setNews(e.target.value)} // Set 'news' value
+            required
+            className="input-field"
+          />
+        </div>
+        <div className="form-group">
           <label>Image URL</label>
           <input
             type="url"
@@ -151,7 +79,7 @@ export default function Home() {
         </div>
         <button type="submit" className="submit-button">Submit</button>
       </form>
-      
+
       <style jsx>{`
         .container {
           display: flex;
@@ -254,4 +182,3 @@ export default function Home() {
     </div>
   );
 }
- 
